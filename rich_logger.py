@@ -72,6 +72,8 @@ class RichLogger(logging.Logger):
     def critical(self, message, *args, **kwargs):
         self.log(LogLevel.CRITICAL.value, message, *args, **kwargs)
 
+    def done(self):
+        self.info("done.")
 
 # Setting the logger class to our custom logger
 logging.setLoggerClass(RichLogger)
